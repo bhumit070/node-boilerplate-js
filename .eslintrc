@@ -1,0 +1,18 @@
+{
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "no-console": "warn",
+    "no-unused-vars": "error",
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "no-undef": 2,
+    "camelcase": 0
+  }
+}
