@@ -54,9 +54,9 @@ class CustomResponse {
 }
 
 class CustomError {
-	constructor({ error, message = 'Internal Server Error', code = 500 }) {
+	constructor({ error, message = 'Internal Server Error', status = 500 }) {
 		const customError = new Error(message);
-		error.code = error.isJoi ? 422 : code;
+		customError.code = error && error.isJoi ? 422 : status;
 		throw customError;
 	}
 }
