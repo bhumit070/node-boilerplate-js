@@ -46,7 +46,7 @@ class CustomResponse {
 		if(response.error) {
 			errorLogger.error(response);
 		} else {
-			successLogger.info(response);
+			successLogger.info({...response});
 		}
 		return this.res.status(response.status).json(response);
 	}
