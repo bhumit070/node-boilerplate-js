@@ -20,6 +20,8 @@ This is a boiler plate repo for NodeJs. It contains the following:
 	```yarn```
 or if you prefer <b>npm</b> then run
 	``` rm yarn.lock && npm i```
+- To start development server run ```yarn dev``` or ```npm run dev```
+- To start production server run ```yarn start``` or ```npm run start```
 
 # Dependencies
 	- Express ( to make http server )
