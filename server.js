@@ -1,5 +1,6 @@
 require('dotenv').config();
 require('./db/mongodb/');
+require('./db/redis');
 const express = require('express');
 const { logger } = require('./server/logger');
 const app = express();

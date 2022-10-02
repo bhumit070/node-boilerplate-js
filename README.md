@@ -30,6 +30,7 @@ or if you prefer <b>npm</b> then run
 	- joi ( to validate request body )
 	- morgan ( to log incoming requests )
 	- Winston ( to log success and error responses )
+	- ioredis ( to connect to redis )
 
 # Dev Dependencies
 	- nodemon ( to restart server on file changes )
