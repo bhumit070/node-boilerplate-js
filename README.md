@@ -24,13 +24,14 @@ or if you prefer <b>npm</b> then run
 - To start production server run ```yarn start``` or ```npm run start```
 
 # Dependencies
-	- Express ( to make http server )
+	- express ( to make http server )
 	- cors ( to enable cors for frontend )
 	- dotenv ( to mange all environment variables )
 	- joi ( to validate request body )
 	- morgan ( to log incoming requests )
 	- Winston ( to log success and error responses )
 	- ioredis ( to connect to redis )
+	- mongoose ( to connect to mongodb )
 
 # Dev Dependencies
 	- nodemon ( to restart server on file changes )
