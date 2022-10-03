@@ -11,17 +11,16 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-async function sendMail() {
+async function sendMail(to) {
 	await transporter.sendMail({
-		from: 'Bhoomit Ganatra <bhoomit.dev@gmail.com>',
-		to: 'ganatrabhoomit070@gmail.com',
+		from: `${constants.MAIL_DISPLAY_NAME} <${constants.MAIL_FROM}>`,
+		to,
 		html: 'Hello, from <b>Nodejs JavaScript</b> boilerplate',
 		text: 'Hello, from Nodejs JavaScript boilerplate',
 		subject: 'NodeJs Boilerplate Mail',
 	});
 }
 
-sendMail().finally(() => process.exit(0));
 
 module.exports = {
 	sendMail
