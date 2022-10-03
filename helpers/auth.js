@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const constants = require('../config/constants');
+const { constants } = require('../config');
 
 function encodeToken(user) {
 	const token = jwt.sign(user, constants.JWT_SECRET, {

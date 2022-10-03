@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const constants = require('../../config/constants');
+const { constants } = require('../../config');
 const { CustomResponse } = require('../../helpers/response');
 const V1Routes = require('./v1.route');
 
