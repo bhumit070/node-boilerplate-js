@@ -29,6 +29,13 @@ async function login(req, res) {
 async function register(req, res) {
 	try {
 		const value = await registerSchema.validateAsync(req.body, joiConfig.defaultConfig);
+
+		const existingUser = await UserModel.findOne({ email: value.email }).lean();
+
+		if(existingUser) {
+			throw new CustomError({ message: 'User already exists.!', status: 409 });
+		}
+
 		const createdUser = await UserModel.create(value);
 		const data = {
 			user: createdUser
