@@ -13,6 +13,6 @@
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "no-undef": 2,
-    "camelcase": 0
+    "camelcase": 2
   }
 }
