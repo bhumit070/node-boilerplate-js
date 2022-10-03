@@ -1,4 +1,4 @@
-const { CustomResponse, CustomError } = require('../../helpers/response');
+const { CustomResponse, CustomError } = require('../../helpers').responseHelpers;
 const { loginSchema, registerSchema } = require('./validators');
 const joiConfig = require('../../config/joi');
 const { UserModel } = require('../../db/mongodb/models');

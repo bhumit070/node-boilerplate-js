@@ -1,6 +1,6 @@
 const { UserModel } = require('../../db/mongodb/models');
 const { redisClient, redisPublisher } = require('../../db/redis');
-const { CustomResponse } = require('../../helpers/response');
+const { CustomResponse } = require('../../helpers').responseHelpers;
 
 
 async function getAllUsers(req, res) {
