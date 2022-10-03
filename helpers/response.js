@@ -44,7 +44,7 @@ class CustomResponse {
 	send({ status, error, message, data = []}) {
 		const response = responseGenerator({ status, error, message, data });
 		if(response.error) {
-			errorLogger.error(response);
+			errorLogger.error({...response});
 		} else {
 			successLogger.info({...response});
 		}

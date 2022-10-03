@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const { constants } = require('../config');
 
 function encodeToken(user) {
-	const token = jwt.sign(user, constants.JWT_SECRET, {
+	const token = jwt.sign({ id: user._id }, constants.JWT_SECRET, {
 		expiresIn: constants.JWT_EXPIRES_IN
 	});
 	return token;
