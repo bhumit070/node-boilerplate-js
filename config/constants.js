@@ -6,4 +6,6 @@ module.exports = {
 	MAIL_PORT: process.env.MAIL_PORT || 587,
 	MAIL_USERNAME: process.env.MAIL_USERNAME || '',
 	MAIL_PASSWORD: process.env.MAIL_PASSWORD || '',
+	MAIL_FROM: process.env.MAIL_FROM || 'node@node.com',
+	MAIL_DISPLAY_NAME: process.env.MAIL_DISPLAY_NAME || 'Node Boilerplate - JS'
 };

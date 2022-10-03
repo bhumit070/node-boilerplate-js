@@ -1,15 +1,17 @@
 require('dotenv').config();
+const { logger } = require('./server/logger');
+const http = require('http');
+const app = require('express')();
+const server = http.createServer(app);
+
 require('./db/mongodb/');
 require('./db/redis');
-const express = require('express');
-const { logger } = require('./server/logger');
-const app = express();
+require('./server/middlewares')(app);
+require('./modules/routes')(app);
+require('./socket')(server);
 
 const PORT = process.env.PORT || 8000;
 
-require('./server/middlewares')(app);
-require('./modules/routes')(app);
-
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   logger.info(`Server is running on port ${PORT}. 🚀`);
 });
