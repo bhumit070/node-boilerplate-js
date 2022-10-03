@@ -2,20 +2,7 @@ const { CustomResponse, CustomError } = require('../../helpers/response');
 const { loginSchema, registerSchema } = require('./validators');
 const joiConfig = require('../../config/joi');
 const { UserModel } = require('../../db/mongodb/models');
-const users = [
-	{
-		id: 1,
-		name: 'John Doe',
-		email: 'john@gmail.com',
-		password: 'johndoe'
-	},
-	{
-		id: 2,
-		name: 'Jane Doe',
-		email: 'jane@gmail.com',
-		password: 'janedoe'
-	},
-];
+const { authHelpers } = require('../../helpers');
 
 async function login(req, res) {
 	try {
@@ -30,8 +17,10 @@ async function login(req, res) {
 		if(user.password !== value.password) {
 			throw new CustomError({ message: 'Invalid credentials.!', status: 401 });
 		}
+
+		const token = authHelpers.encodeToken(user);
 		
-		return new CustomResponse(res).send({ data: { body: value, users } } );
+		return new CustomResponse(res).send({ data: { user, token } } );
 	} catch (error) {
 		return new CustomResponse(res).send({ error });
 	}
