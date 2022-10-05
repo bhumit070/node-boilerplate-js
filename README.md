@@ -1,5 +1,5 @@
 # Welcome to NodeJs boiler plate repo.
-
+- For boilerplate with typescript [click here](https://github.com/bhumit070/node-boilerplate-ts)
 
 This is a boiler plate repo for NodeJs. It contains the following:
 

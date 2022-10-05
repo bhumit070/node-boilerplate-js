@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { logger } = require('../../server/logger');
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/node-boiler-plate';
+const MONGO_URI = process.env.DATABASE_URL || 'mongodb://localhost:27017/node-boiler-plate';
 
 const MONGO_OPTIONS = {};
 
