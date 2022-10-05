@@ -5,6 +5,7 @@ const app = require('express')();
 const server = http.createServer(app);
 
 require('./db/mongodb/');
+require('./db/sql');
 require('./db/redis');
 require('./server/middlewares')(app);
 require('./modules/routes')(app);
