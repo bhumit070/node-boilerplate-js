@@ -38,4 +38,3 @@ or if you prefer <b>npm</b> then run
 	- prettier ( to format code )
 	- eslint ( to lint code )
 <hr />
-<center> <h1> Hope you like and use it in production 🚀</h1> </center>
